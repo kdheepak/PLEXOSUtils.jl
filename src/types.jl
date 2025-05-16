@@ -12,6 +12,7 @@ PLEXOSConfig(e::Node, ::AbstractDataset) = PLEXOSConfig(
     getchildtext("value", e)
 )
 
+PLEXOSConfig(e::String, ::Nothing) = PLEXOSConfig(e, "")
 
 struct PLEXOSUnit
     value::String
