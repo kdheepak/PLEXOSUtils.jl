@@ -321,7 +321,7 @@ PLEXOSPeriod0(e::Node, d::AbstractDataset) =
                   getchildint("day_id", e),
                   getchildint("week_id", e),
                   getchildint("month_id", e),
-                  getchildint("quarter_id", e),
+                  something(getchildint("quarter_id", e), 0),
                   getchildint("fiscal_year_id", e),
                   getchildtext("datetime", e))
 
